@@ -12,6 +12,10 @@ services:
 {% for volume in prometheus_volumes %}
     - {{ volume }}
 {% endfor %}
+    commands:
+{% for command in prometheus_commands %}
+    - {{ command }}
+{% endfor %}
 {% endif %}
     deploy:
       resources:
