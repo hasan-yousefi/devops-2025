@@ -162,6 +162,9 @@ prometheus_port:
 prometheus_volumes:
   - "./prometheus.yaml:/etc/prometheus/prometheus.yml"
   - "./alerts.yaml:/etc/prometheus/alerts.yaml"
+prometheus_commands:
+  - "--web.enable-remote-write-receiver"
+  - "--config.file=/etc/prometheus/prometheus.yml"
 
 
 ## Alertmanager Variable
